@@ -1,25 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
+
 import './App.css';
 
+import { Layout } from 'antd';
+
+
+import TodoPage from "./components/TodoPage";
+
 function App() {
+
+  const { Content } = Layout;
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout style={{ background: '#fff' }}>
+      <Content style={{ padding: '0 50px', marginTop: 64 }}>
+      <div style={{ background: '#fff', padding: 24, minHeight: 380 }}>
+
+        <TodoPage />
+
+      </div>
+
+      </Content>
+    </Layout>
   );
 }
 

@@ -1,6 +1,6 @@
-# Todo Vue.js Client
+# Todo React.js Client
 
-This project aims to build a simple frontend using Vue.js for our node.js todo's backend. This project is using Javascript's events in order to trigger hot-reloading. No Vuex here :)
+This project aims to build a simple frontend using React for our node.js todo's backend. This project uses pure React. No state manager here :)
 
 ![Screenshot](https://i.imgur.com/tmLPhFk.jpg)
 

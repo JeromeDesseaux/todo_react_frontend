@@ -1,32 +1,23 @@
 import { List, Skeleton } from 'antd';
 import React from "react";
 
+import config from '../config/config';
+
 // import reqwest from 'reqwest';
 import axios from "axios";
 
-const fakeDataUrl = "http://localhost:8000/todos/";
+const fakeDataUrl = config.endpointUrl;
 
 export default class LoadMoreList extends React.Component {
   state = {
     initLoading: true,
-    loading: false,
-    data: [],
-    list: [],
   };
 
   async componentDidMount() {
-      const todos = await this.getData();
       this.setState({
           initLoading: false,
-          data: todos
     });
   }
-
-  getData = async () => {
-      return await axios.get(fakeDataUrl).then(res => {
-          return res.data;
-      });
-  };
 
   updateTodo = async (todo) => {
       todo.done = !todo.done;

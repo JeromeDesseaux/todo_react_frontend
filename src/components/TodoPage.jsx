@@ -5,7 +5,9 @@ import TodoForm from "./TodoForm";
 import TodoList from "./TodoList";
 import {Typography} from "antd";
 
-const dataUrl = "http://localhost:8000/todos/";
+import config from '../config/config';
+
+const dataUrl = config.endpointUrl;
 const { Title } = Typography;
 
 
